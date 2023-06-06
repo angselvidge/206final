@@ -1,14 +1,18 @@
+/*
+ File: Mountain.java
+ Description: create a program that gives the correct output for each country and its respected output. 
+            follow the code up with an output that gives the smallest elevation with its respected country and region
+ Created: Sunday, June 4th 2023 @ 11:43pm
+ Author: Angela Selvidge 
+ email: angelag8562@student.vvc.edu
+ */
+
 public class Mountain {
 
     private String name;
     private String country;
     private int elevation;
-
-    public Mountain() {
-        this.name = "";
-        this.country = "";
-        this.elevation = 0;
-    }
+    
     public Mountain(String name, String country, int elevation) {
         this.name = name;
         this.country = country;
@@ -17,7 +21,7 @@ public class Mountain {
     public void setName(String name) {
         this.name = name;
     }
-    public void setCountry(String country) {
+     public void setCountry(String country) {
         this.country = country;
     }
     public void setElevation(int elevation) {
