@@ -40,7 +40,7 @@ public class Mountain {
         int minIndex = 0;
         for (int i = 0; i < mountains.length; i++) {
             if (mountains[i].getElevation() < mountains[minIndex].getElevation()) {
-                minIndex = i;
+                minIndex = i; // use chapter 10 as input for elevation index
             }
         }
         return mountains[minIndex];
@@ -51,7 +51,7 @@ public class Mountain {
         mountains[1] = new Mountain("Matterhorn", "Switzeland", 14692);
         mountains[2] = new Mountain("Olympus", "Geece(Macedonia)", 9573);
         mountains[3] = new Mountain("Everest", "Nepal", 290929);
-        mountains[4] = new Mountain("Mount Marcy-Adirondacks", "United Staes", 5344);
+        mountains[4] = new Mountain("Mount Marcy-Adirondacks", "United States", 5344);
         mountains[5] = new Mountain("Mount Mitchell-Blue Ridge", "United States", 6684);
         mountains[6] = new Mountain("Zugpitze", "Switzerland", 9719);
         System.out.printf("%-20s%-20s%10s%20s\n",
@@ -59,15 +59,14 @@ public class Mountain {
         for (Mountain mountain : mountains) {
             System.out.printf("%-20s%-20s%10d%20.2f\n",
                     mountain.getName(), mountain.getCountry(), mountain.getElevation(),
-                    Mountain.toMeters(mountain.getElevation())
-            );
-        }
-        Mountain smallest = minElevation(mountains);
-        System.out.println("Mountain with smallest elevation:"); // might need \n
-        System.out.println("Name: " + smallest.getName());
-        System.out.println("Country: " + smallest.getCountry());
-        System.out.println("Elevation (ft): " + smallest.getElevation());
+                    Mountain.toMeters(mountain.getElevation()));
     }
+    Mountain smallest = minElevation(mountains);
+    System.out.println("Mountain with smallest elevation:"); // might need \n
+    System.out.println("Name: " + smallest.getName());
+    System.out.println("Country: " + smallest.getCountry());
+    System.out.println("Elevation (ft): " + smallest.getElevation());
+}  // chapter 10 for function and input 
 }
 
 
