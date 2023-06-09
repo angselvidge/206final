@@ -46,7 +46,7 @@ public class Mountain {
     public String getName() {
         return name;
     }
-    public String getCountry() {
+    public String getCountry() { // getcountry
         return country;
     }
     public int getElevation() {
